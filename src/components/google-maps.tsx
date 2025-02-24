@@ -40,12 +40,12 @@ export function GoogleMaps() {
 	return isLoaded ? (
 		<>
 			<div className="relative mt-5">
-				<Separator className="lg:w-[680px] w-96" />
+				<Separator className="lg:w-[800px] w-96" />
 				<span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-background px-2 text-muted-foreground">
 					Imperatriz
 				</span>
 			</div>
-			<div className=" lg:w-[680px] lg:h-[250px] w-[90%] h-72">
+			<div className=" lg:w-[800px] lg:h-[250px] w-[90%] h-72">
 				<GoogleMap
 					mapContainerStyle={{
 						width: "100%",
@@ -53,7 +53,7 @@ export function GoogleMaps() {
 						borderRadius: "16px",
 					}}
 					center={orenImp}
-					zoom={13}
+					zoom={15}
 					onLoad={onLoadImp}
 					onUnmount={onUnmount}
 				>
@@ -62,13 +62,13 @@ export function GoogleMaps() {
 				</GoogleMap>
 			</div>
 			<div className="relative">
-				<Separator className="lg:w-[680px] w-96" />
+				<Separator className="lg:w-[800px] w-96" />
 
 				<span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-background px-2 text-muted-foreground">
 					Balsas
 				</span>
 			</div>
-			<div className="lg:w-[680px] lg:h-[250px] w-[90%] h-72">
+			<div className="lg:w-[800px] lg:h-[250px] w-[90%] h-72">
 				<GoogleMap
 					mapContainerStyle={{
 						width: "100%",
@@ -76,7 +76,7 @@ export function GoogleMaps() {
 						borderRadius: "16px",
 					}}
 					center={orenBal}
-					zoom={13}
+					zoom={15}
 					onLoad={onLoadBal}
 					onUnmount={onUnmount}
 				>

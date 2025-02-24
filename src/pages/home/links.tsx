@@ -1,10 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronRight, Globe } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 
 export function Links() {
     return (
-        <div className="flex flex-col gap-4 w-[90%] lg:w-[680px]">
+        <div className="flex flex-col gap-4 w-[90%] lg:w-[800px]">
             <Card className="hover:bg-stone-200 dark:hover:bg-background transition-all  ">
                 <a
                 className="relative" 
