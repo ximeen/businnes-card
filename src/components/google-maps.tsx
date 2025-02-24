@@ -23,11 +23,11 @@ export function GoogleMaps() {
 	const [_, setMap] = useState<any>(null);
 
 	const onLoadImp = useCallback(function callback(map: any) {
-		const bounds = new window.google.maps.LatLngBounds(orenImp);
+		new window.google.maps.LatLngBounds(orenImp);
 		setMap(map);
 	}, []);
 	const onLoadBal = useCallback(function callback(map: any) {
-		const bounds = new window.google.maps.LatLngBounds(orenBal);
+		new window.google.maps.LatLngBounds(orenBal);
 		setMap(map);
 		
 	}, []);
