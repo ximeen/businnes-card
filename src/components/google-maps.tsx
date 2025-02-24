@@ -3,8 +3,8 @@ import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import { Separator } from "./ui/separator";
 
 const orenImp = {
-	lat: -5.519913772382692,
-	lng: -47.46394738909955,
+	lat: -5.5198865,
+	lng: -47.4639448,
 };
 
 const orenBal = {
@@ -13,6 +13,8 @@ const orenBal = {
 };
 
 export function GoogleMaps() {
+	const zoomMap = 15
+
 	const { isLoaded } = useJsApiLoader({
 		id: "google-map-script",
 		googleMapsApiKey: `${import.meta.env.VITE_GOOGLE_MAPS_KEY}`,
@@ -22,15 +24,12 @@ export function GoogleMaps() {
 
 	const onLoadImp = useCallback(function callback(map: any) {
 		const bounds = new window.google.maps.LatLngBounds(orenImp);
-		map.fitBounds(bounds);
-
 		setMap(map);
 	}, []);
 	const onLoadBal = useCallback(function callback(map: any) {
 		const bounds = new window.google.maps.LatLngBounds(orenBal);
-		map.fitBounds(bounds);
-
 		setMap(map);
+		
 	}, []);
 
 	const onUnmount = useCallback(function callback(_map: any) {
@@ -53,9 +52,9 @@ export function GoogleMaps() {
 						borderRadius: "16px",
 					}}
 					center={orenImp}
-					zoom={15}
 					onLoad={onLoadImp}
 					onUnmount={onUnmount}
+					zoom={zoomMap}
 				>
 					<Marker position={orenImp} />
 					<></>
@@ -76,9 +75,10 @@ export function GoogleMaps() {
 						borderRadius: "16px",
 					}}
 					center={orenBal}
-					zoom={15}
 					onLoad={onLoadBal}
 					onUnmount={onUnmount}
+					zoom={zoomMap}
+
 				>
 					<Marker position={orenBal} />
 					<></>
