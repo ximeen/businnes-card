@@ -32,11 +32,11 @@ export function Gallery(){
 				</span>
 			</div>
 
-            <div className="grid grid-rows-2 grid-cols-2 px-20 gap-4 ">
+            <div className="grid lg:grid-rows-2 lg:grid-cols-2 lg:px-20 px-4 gap-4 ">
             {images.map((src: string, index:number)=>(
                 <div key={index}>
-                    {!loaded[index] && <Skeleton className="w-[400px] h-[500px] rounded-lg"/>}
-                    <img src={src} className={`rounded-lg w-[400px] h-[500px] bg-cover bg-center transition-opacity duration-1000 ${loaded[index] ? "opacity-100" : "opacity-0"}`}
+                    {!loaded[index] && <Skeleton className="w-[90%] lg:w-[400px] lg:h-[500px] rounded-lg"/>}
+                    <img src={src} className={`rounded-lg lg:w-[400px] lg:h-[500px] bg-cover bg-center transition-opacity duration-1000 ${loaded[index] ? "opacity-100" : "opacity-0"}`}
                     onLoad={()=> handleLoad(index)}
                     >
                     </img>
