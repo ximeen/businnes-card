@@ -2,15 +2,14 @@ import { useState } from "react";
 import { Separator } from "./ui/separator";
 import { Skeleton } from "./ui/skeleton";
 
-
-
 export function Gallery(){
     const images: string[] = [
         "entrada.jpg",
         "corredor.jpg",
         "compressor-axor.jpg",
+        "armario.jpeg",
+        "vendedores.jpeg",
         "rack.jpg"
-    
     ]
     
     const [loaded, setLoaded] = useState(Array(images.length).fill(false))
@@ -32,7 +31,7 @@ export function Gallery(){
 				</span>
 			</div>
 
-            <div className="grid lg:grid-rows-2 lg:grid-cols-2 lg:px-20 px-4 gap-4 ">
+            <div className="grid lg:grid-rows-3 lg:grid-cols-2 lg:px-20 px-4 gap-4 ">
             {images.map((src: string, index:number)=>(
                 <div key={index}>
                     {!loaded[index] && <Skeleton className="w-[90%] lg:w-[400px] lg:h-[500px] rounded-lg"/>}
